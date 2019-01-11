@@ -1,0 +1,174 @@
+@import url('_settings.fonts.scss');
+
+$color-text-darkest: #0a3257;
+$color-text-dark: #0c8fe1;
+$color-test-light: #778f9b;
+$color-text-lightest: white;
+
+$color-border: #e6eaee;
+
+@mixin primary-text($color: $color-text-darkest, $size: 16px) {
+    font-family: 'Roboto-Regular';
+    font-size: $size;
+    color: $color;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.weekly-report-container {
+    width: 100%;
+    background-color: #dde2e8;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.primary-container {
+    width: 600px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background-color: white;
+
+    table {
+        width: 100%;
+        border-spacing: 0;
+    }
+}
+
+.hero-banner {
+    background-image: url('assets/img/banner-negative.png');
+    background-size: cover;
+    padding: 15px 25px;
+
+    &__logo-container {
+        padding-right: 240px;
+        text-align: left;
+    }
+
+    &__logo {
+        text-align: left;
+    }
+
+    &__link {
+        text-align: right;
+    }
+
+    &__copy {
+        padding: 48px 25px 65px;
+        max-width: 380px;
+        text-align: center;
+        margin: auto;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+    }
+}
+
+.info-section {
+    &__header {
+        padding: 12px 32px;
+        border-bottom: 1px solid $color-text-dark;
+    }
+
+    &__body {
+        padding: 16px 32px;
+    }
+
+    &__tile-item {
+        width: 33.3%;
+        box-sizing: border-box;
+        padding: 4px;
+        border-spacing: 0;
+    }
+
+    &__tile-item-inner {
+        border: 1px solid $color-border;
+        padding: 20px 16px 16px;
+        text-align: left;
+        border-radius: 4px;
+
+        &.empty {
+            border: none;
+            padding: 5px;
+        }
+    }
+}
+
+.overview {
+    &__dashboard-link {
+        margin-top: 7px;
+    }
+}
+
+.logo {
+    max-width: 120px;
+    margin-right: 8px;
+}
+
+.hero-banner-subtitle {
+    @include primary-text($color-text-lightest, 14px);
+}
+
+.hero-banner-link {
+    @include primary-text($color-text-lightest, 12px);
+    text-decoration: none;
+}
+
+.hero-banner-title {
+    @include primary-text($color-text-lightest, 20px);
+    font-family: 'Roboto-Bold';
+    line-height: 1.45;
+}
+
+.hero-banner-period {
+    @include primary-text($color-text-lightest, 12px);
+}
+
+.info-section-title {
+    @include primary-text($size: 18px);
+}
+
+.tile-item-title {
+    @include primary-text();
+    margin-bottom: 11px;
+    white-space: nowrap;
+}
+
+.tile-item-value {
+    @include primary-text($size: 28px);
+    font-family: 'Roboto-Bold';
+    margin-bottom: 11px;
+}
+
+.tile-item-dynamics-value {
+    padding: 4px 9px;
+    @include primary-text($color-text-lightest, 14px);
+    border-radius: 20px;
+    background-color: #00c0bb;
+}
+
+.tile-item-arrow-down + .tile-item-dynamics-value {
+    background-color: #dd5252;
+}
+
+.tile-item-arrow-up + .tile-item-dynamics-value {
+    background-color: #00c0bb;
+}
+
+.message-text {
+    @include primary-text($size: 14px);
+}
+
+.primary-link {
+    @include primary-text($color-text-dark, 14px);
+    text-decoration: none;
+}
